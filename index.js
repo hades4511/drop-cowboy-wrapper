@@ -21,8 +21,8 @@ const formatData = data => {
 }
 
 const sendRequest = (res, data) => {
-    formatData(data);
     console.log(data);
+    formatData(data);
     axios({
         method: 'post',
         url: process.env.url,
@@ -56,8 +56,8 @@ app.get('/get', (req, res, next) => {
 });
 
 app.use('/status', (req, res, next) => {
-    console.log('\x1b[36m%s\x1b[0m', 'status');
-    console.log('\x1b[36m%s\x1b[0m', res);
+    console.log('status');
+    console.log(req);
 })
 
 app.listen(port, function() {
