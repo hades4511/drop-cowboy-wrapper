@@ -17,6 +17,7 @@ const formatData = data => {
     data.audio_type = 'mp3';
     data.phone_number = `+${data.phone_number}`;
     data.caller_id = `+${data.caller_id}`;
+    data.callback_url = 'https://dropcowboy.herokuapp.com/status';
 }
 
 const sendRequest = (res, data) => {
