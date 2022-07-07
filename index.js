@@ -54,6 +54,11 @@ app.get('/get', (req, res, next) => {
     return sendRequest(res, req.query);
 });
 
+app.use('/status', (req, res, next) => {
+    console.log('\x1b[36m%s\x1b[0m', 'status');
+    console.log('\x1b[36m%s\x1b[0m', res);
+})
+
 app.listen(port, function() {
     console.log(`Listening on port ${port}`);
 });
