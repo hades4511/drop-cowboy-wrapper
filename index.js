@@ -57,7 +57,7 @@ app.get('/get', (req, res, next) => {
 
 app.use('/status', (req, res, next) => {
     console.log('status');
-    console.log(req);
+    // console.log(req);
 })
 
 app.listen(port, function() {
