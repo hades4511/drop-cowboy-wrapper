@@ -17,12 +17,12 @@ const formatData = data => {
     data.audio_type = 'mp3';
     data.phone_number = `+${data.phone_number.trim()}`;
     data.caller_id = `+${data.caller_id.trim()}`;
-    data.callback_url = 'https://dropcowboy.herokuapp.com/status';
+    // data.callback_url = 'https://dropcowboy.herokuapp.com/status';
 }
 
 const sendRequest = (res, data) => {
-    console.log(data);
     formatData(data);
+    console.log(data);
     axios({
         method: 'post',
         url: process.env.url,
