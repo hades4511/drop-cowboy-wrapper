@@ -15,8 +15,8 @@ const formatData = data => {
     data.foreign_id = process.env.foreign_id;
     data.secret = process.env.secret;
     data.audio_type = 'mp3';
-    data.phone_number = `+${data.phone_number}`;
-    data.caller_id = `+${data.caller_id}`;
+    data.phone_number = `+${data.phone_number.trim()}`;
+    data.caller_id = `+${data.caller_id.trim()}`;
     data.callback_url = 'https://dropcowboy.herokuapp.com/status';
 }
 
